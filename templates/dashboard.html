@@ -1,0 +1,26 @@
+<h2>Leo Club Dashboard</h2>
+
+<p>Total Income: {{ income }}</p>
+<p>Total Expense: {{ expense }}</p>
+<p>Balance: {{ balance }}</p>
+
+<h3>Add Income</h3>
+<form method="post" action="/add_income">
+    <input name="date" placeholder="Date" required>
+    <input name="source" placeholder="Source" required>
+    <input name="amount" placeholder="Amount" required>
+    <button type="submit">Add</button>
+</form>
+
+<h3>Add Expense</h3>
+<form method="post" action="/add_expense">
+    <input name="date" placeholder="Date" required>
+    <input name="type" placeholder="Expense Type" required>
+    <input name="amount" placeholder="Amount" required>
+    <button type="submit">Add</button>
+</form>
+
+<br>
+<a href="/export">Download Income Excel</a>
+<br><br>
+<a href="/logout">Logout</a>
